@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: MyST Markdown
+    url: https://mystmd.org
+    about: Questions about MyST itself, its directives and roles.

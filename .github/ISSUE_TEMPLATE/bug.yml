@@ -1,0 +1,28 @@
+name: Bug report
+description: Something in the extension doesn't work as it should.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw instead. A screenshot helps.
+    validations:
+      required: true
+  - type: textarea
+    id: myst
+    attributes:
+      label: MyST that shows it
+      description: The smallest piece of a file (or frontmatter) that shows the problem.
+      render: markdown
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: In the Extensions view, next to Curvenote.
+      placeholder: '0.1.1'
+  - type: input
+    id: editor
+    attributes:
+      label: Editor and version
+      placeholder: VS Code 1.105, Cursor 2.0, VSCodium...
