@@ -92,17 +92,22 @@ still read.
 
 ## File association
 
-The extension owns the `.myst` extension and `myst.yml` / `curvenote.yml`. To treat `.md` files
-as MyST too, add to your settings:
+The extension opens `.md` and `.myst` files as MyST, and works in `myst.yml` and
+`curvenote.yml` too. MyST is a superset of Markdown, so plain Markdown files work as they are; they
+are formatted on save too, which `"[myst]": { "editor.formatOnSave": false }` turns off.
+
+To keep `.md` files as plain Markdown (for VS Code's Markdown preview, or another Markdown
+extension), add to your settings, or to a workspace's `.vscode/settings.json` for just that
+project:
 
 ```jsonc
 {
-  "files.associations": { "*.md": "myst" },
+  "files.associations": { "*.md": "markdown" },
 }
 ```
 
-This is off by default, so the extension doesn't take over every Markdown file in every
-workspace.
+`.myst` files stay MyST either way. To open one `.md` file as the other language, use
+**Change Language Mode** in the status bar.
 
 ## Issues and releases
 
